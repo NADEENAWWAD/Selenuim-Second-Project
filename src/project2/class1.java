@@ -51,13 +51,13 @@ public class class1 {
         	}
         }
 	
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void addItemToCard() throws InterruptedException {
 		
 		List <WebElement> itemList = driver.findElements(By.xpath("//button[text() = 'Add to cart']")) ; 
 		
 		// For Loop to Print the Item Name & Item Price
-        for(int count = 0 ; count < itemList.size() ; count++) {
+        for(int count = 0 ; count < itemList.size() ; count=count+2) {
         	itemList.get(count).click() ; 
         	Thread.sleep(2000) ;
         	}
